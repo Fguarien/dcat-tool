@@ -1,6 +1,10 @@
 name: Validate Schema, create Template
 on: [push]
 
+# Moindre privilège pour GITHUB_TOKEN (OpenSSF Scorecard Token-Permissions).
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
